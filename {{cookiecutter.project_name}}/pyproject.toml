@@ -32,9 +32,8 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 include = [
-    "src/seatools/ioc/starters/{{cookiecutter.simple_name}}/*.py",
+    "seatools",
 ]
-sources = ["src"]
 
 [tool.hatch.build.targets.sdist]
 include = [
