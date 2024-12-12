@@ -1,0 +1,43 @@
+[project]
+name = "{{ cookiecutter.project_name }}"
+version = "1.0.0"
+authors = [
+    { name = "{{cookiecutter.author}}", email = "{{ cookiecutter.email }}" },
+]
+description = "{{ cookiecutter.friendly_name }}"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+license = "{{ cookiecutter.license }}"
+keywords = [
+    "seatools",
+    "starter",
+]
+
+dependencies = [
+    "seatools",
+]
+
+[project.urls]
+Homepage = "https://github.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}"
+Issues = "https://github.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "src/seatools/ioc/starters/{{cookiecutter.simple_name}}/*.py",
+]
+sources = ["src"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/seatools/ioc/starters/{{cookiecutter.simple_name}}/*.py",
+]
+sources = ["src"]

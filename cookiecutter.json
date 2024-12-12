@@ -1,0 +1,10 @@
+{
+  "project_name": "seatools-starter-example",
+  "simple_name":  "{{ '_'.join(cookiecutter.project_name.replace('-', '_').split('_')[2:]) }}",
+  "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
+  "author": "seatools-py",
+  "email": "521274311@qq.com",
+  "copyright_year": "{% now 'utc', '%Y' %}",
+  "version": "1.0.0",
+  "license": ["MIT", "Apache-2.0", "GPL-3.0"]
+}
