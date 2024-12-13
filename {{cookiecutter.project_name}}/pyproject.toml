@@ -37,6 +37,6 @@ include = [
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "src/seatools/ioc/starters/{{cookiecutter.simple_name}}/*.py",
+    "src/seatools/ioc/starters/{{cookiecutter.simple_name}}/*",
 ]
 sources = ["src"]
